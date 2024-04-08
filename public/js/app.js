@@ -272,7 +272,7 @@ const err = function(error){
 
 loading()
 
-fetch(`http://localhost:3000/weather?address=Delhi`).then((response) => {
+fetch(`/weather?address=Delhi`).then((response) => {
   response.json().then((data) => {
     if (data.error) {
       err(data.error)
@@ -291,7 +291,7 @@ WeatherForm.addEventListener("submit", (e) => {
 
   const city = document.querySelector("input").value;
   console.log(city);
-  fetch(`http://localhost:3000/weather?address=${city}`).then((response) => {
+  fetch(`/weather?address=${city}`).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         err(data.error);
