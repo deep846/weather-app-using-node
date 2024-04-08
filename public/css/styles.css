@@ -1,0 +1,244 @@
+body{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    /* display: flex; */
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #5900be;
+}
+.main-content{
+    flex-grow: 1;
+}
+footer{
+    color: #888888;
+    border-top: 1px solid;
+    margin-top: 16px;
+    padding: 16px 0;
+} 
+
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a{
+    color: #ffffff;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+
+.portrait{
+    width: 250px;
+    border-radius: 10%;
+}
+
+input{
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.3);
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    background-color: #6803db;
+}
+
+h2,
+label,
+p {
+    color: #fff;
+    margin: 8px 0;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+button {
+    background: #8b48d7;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #debff4;
+    color: #8b48d7;
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+#weather-info {
+    font-size: 20px;
+}
+
+#weather-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    /* text-wrap: wrap; */
+    color: white;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+
+
+
+#daily-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; */
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 5px;
+    /* width of vertical scrollbar */
+    border: 1px solid #d5d5d547;
+
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #000;
+    border-radius: 10px;
+}
+
+.daily-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    /* text-wrap: wrap; */
+}
+
+.daily-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#daily-heading {
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+.content-about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.text-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.text-about a{
+    text-decoration: none !important; 
+    color: white !important;
+}
+
+.text-about a:hover {
+    text-decoration: none !important;
+    color: rgb(140, 148, 237) !important;
+}
+
+.help-a{
+    text-decoration: none !important;
+        color: white !important;
+}
+
+.help-a:hover {
+    text-decoration: none !important;
+    color: rgb(140, 148, 237) !important;
+}
