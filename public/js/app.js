@@ -68,9 +68,9 @@ tempDivInfo.innerHTML = "";
 
             const temperatureHTML = `<p>${temperature}°C</p>`;
             const weatherHtml = `
-            <p>Feels like ${flike}°C</p>
-            <p>Min: ${tmin}°C/ Max:${tmax}°C</p>
-            <p>Sun-Rise: ${sunr} / Sun-Set: ${suns}</p>
+            <p>Feels like: ${flike}°C</p>
+            <p>Min: ${tmin}°C/ Max: ${tmax}°C</p>
+            <p>Sunrise: ${sunr} / Sunset: ${suns}</p>
             <p>Precip: ${precip===null?0:precip} mm</p>
             <p>Humidity: ${humidity}%</p>
             <p>Visibility: ${visibility} km</p>
@@ -155,6 +155,7 @@ function displayDailyForecast(data) {
       "November",
       "December",
     ];
+    let options = { timeStyle: "short", hour12: true };
     const date = dateTime.getDate();
     const day = weekday[dateTime.getDay()];
     const month = months[dateTime.getMonth()];
@@ -167,6 +168,10 @@ function displayDailyForecast(data) {
     const conditions = item.conditions;
     const humidity = item.humidity;
     const visibility = item.visibility;
+    let sunrise = new Date(item.sunriseEpoch*1000);
+    sunrise = sunrise.toLocaleTimeString("en-US", options);
+    let sunset = new Date(item.sunsetEpoch*1000);
+    sunset = sunset.toLocaleTimeString("en-US", options);
     const dailyItemHtml = `
             <div class="daily-item">
                 <span>${day}</span>
@@ -177,6 +182,7 @@ function displayDailyForecast(data) {
                 <span>feels: ${feellike}°C</span>
                 <span>${tmin}°C / ${tmax}°C</span>
                 <span>H: ${humidity}% / V: ${visibility} km</span>
+                <span>SR: ${sunrise} / SS: ${sunset}</span>
             </div>
         `;
 
